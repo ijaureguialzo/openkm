@@ -12,9 +12,10 @@ help: _header
 _urls: _header
 	${info }
 	@echo Sitios disponibles:
-	@echo ------------------------------
+	@echo ----------------------------------
 	@echo [OpenKM] http://localhost:8080
-	@echo ------------------------------
+	@echo [phpMyAdmin] http://localhost:8090
+	@echo ----------------------------------
 
 _header:
 	@echo ------
