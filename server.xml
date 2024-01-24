@@ -22,7 +22,7 @@
         <Resource name="jdbc/OpenKMDS" auth="Container" type="javax.sql.DataSource"
                   maxTotal="100" maxIdle="30" maxWaitMillis="10000" validationQuery="select 1"
                   username="openkm" password="openkm" driverClassName="com.mysql.cj.jdbc.Driver"
-                  url="jdbc:mysql://mysql:3306/okmdb?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF8&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+                  url="jdbc:mysql://mariadb:3306/okmdb?useSSL=false&amp;autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF8&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
 
         <Resource name="mail/OpenKM" auth="Container" type="javax.mail.Session"
                   mail.smtp.host="localhost" mail.from="noreply@openkm.com"/>
