@@ -1,0 +1,27 @@
+services:
+
+  openkm:
+    image: openkm/openkm-ce:latest
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server.xml:/opt/tomcat/conf/server.xml
+      - ./OpenKM.cfg:/opt/tomcat/OpenKM.cfg
+      - openkm_repository:/opt/tomcat/repository
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.11
+    environment:
+      - MYSQL_DATABASE=okmdb
+      - MYSQL_USER=openkm
+      - MYSQL_PASSWORD=openkm
+      - MYSQL_ROOT_PASSWORD=openkm
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  openkm_repository:
+  mariadb_data:
